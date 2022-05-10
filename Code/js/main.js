@@ -2,8 +2,6 @@
 
 const searchText = document.querySelector('.searchText')
 const submitButton = document.querySelector('.submitButton').addEventListener('click', getDrinkName);
-const searchIngredients = document.querySelector('.searchIngredients')
-const display = document.querySelector('.display')
 const randomDrink = document.querySelector('.randomDrink').addEventListener('click', getRandomDrink);
 
 // Get recipe for a drink from API
@@ -37,18 +35,6 @@ function getDrinkName() {
                 let drinkInstructions = document.querySelector('p');
                 drinkInstructions.innerHTML = element.strInstructions;
             });
-        
-            function showDrink() {
-                let thumbnail = document.querySelector('.drinkThumbnail');
-                let glass = document.querySelector('.glass');
-                let measurements = document.querySelector('.measurements');
-                let instructions = document.querySelector('.instructions');
-                let ingredients = document.querySelector('.ingredients');
-                let alocholic = document.querySelector('.alocholic');
-                let category = document.querySelector('.category');
-        
-                return { thumbnail, glass, measurements, instructions, ingredients, alocholic, category };
-            };
         })
         .catch(error => alert(error));
 }
@@ -78,18 +64,6 @@ function getRandomDrink() {
             let drinkInstructions = document.querySelector('p');
             drinkInstructions.innerHTML = element.strInstructions;
         });
-    
-        function showDrink() {
-            let thumbnail = document.querySelector('.drinkThumbnail');
-            let glass = document.querySelector('.glass');
-            let measurements = document.querySelector('.measurements');
-            let instructions = document.querySelector('.instructions');
-            let ingredients = document.querySelector('.ingredients');
-            let alocholic = document.querySelector('.alocholic');
-            let category = document.querySelector('.category');
-    
-            return { thumbnail, glass, measurements, instructions, ingredients, alocholic, category };
-        };
     })
     .catch(error => alert(error)); 
 }
