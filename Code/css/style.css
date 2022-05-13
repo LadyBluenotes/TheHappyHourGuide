@@ -18,6 +18,10 @@ img{
 
 /* Header */
 
+header{
+  text-align: center;
+}
+
 .getInput {
   /* Positioning */
   display: flex;
