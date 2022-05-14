@@ -10,11 +10,11 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-		
-		<!-- Bootstrap -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	
+
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/5ec4a06a9d.js" crossorigin="anonymous"></script>
+
+
 </head>
 	<body>
 
@@ -24,11 +24,17 @@
 			</div>
 		</header>
 		
-		<section class="getInput d-flex justify-content-center container-sm align-items-center align-self-center">
-			<span class="h3">Get your cocktail recipe!</span>
-			<input class="searchText " type="text" name="" value="">
-			<button class="submitButton btn btn-outline-dark" type="button" name="button">Get Cocktail</button>
-			<button class="randomDrink btn btn-outline-dark" type="button" name="button">Surprise Me!</button>
+		<section class="getInput">
+			<h3 class="">Get your cocktail recipe!</h3>
+			
+			<div class="">
+				<input class="searchText" type="text" name="" value="" placeholder="Find your drink...">
+						<button id="searchButton" class="" type="button" name="button">
+							<i class="fa-solid fa-martini-glass-citrus"></i>
+						</button>
+			</div>
+			
+			<button id="randomDrink" class="" type="button" name="button">Surprise Me!</button>
 		</section>
 
 		<section class="results">

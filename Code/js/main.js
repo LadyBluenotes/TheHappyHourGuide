@@ -1,18 +1,22 @@
 // Event Listeners
 
-const searchText = document.querySelector('.searchText')
-const submitButton = document.querySelector('.submitButton').addEventListener('click', getDrinkName);
-const randomDrink = document.querySelector('.randomDrink').addEventListener('click', getRandomDrink);
+document.getElementById('searchButton').addEventListener('click', getDrinkName);
+document.getElementById('randomDrink').addEventListener('click', getRandomDrink);
+
 
 // Get recipe for a drink from API
 
 function getDrinkName() {
-    fetch (`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText.value}`)
+
+    const searchText = document.querySelector('.searchText').value;
+
+    fetch (`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`)
         .then(response => response.json())
         .then(data => {
             console.log(data.drinks);
         })
         .then((result) => function displayDrinks(result){
+
             // If there are no drinks related to user input, display message
             if (result.drinks == null){
                 alert("No drinks found. Please try again.");
@@ -25,7 +29,7 @@ function getDrinkName() {
         
                 // Thumbnail from API
                 let drinkThumbnail = document.querySelector('img');
-                drinkThumbnail.src = element.strDrinkThumbnail;
+                drinkThumbnail.src = element.strDrinkThumb;
         
                 // Drink name from API
                 let drinkName = document.querySelector('h2');
@@ -54,7 +58,7 @@ function getRandomDrink() {
     
             // Thumbnail from API
             let drinkThumbnail = document.querySelector('img');
-            drinkThumbnail.src = element.strDrinkThumbnail;
+            drinkThumbnail.src = element.strDrinkThumb;
     
             // Drink name from API
             let drinkName = document.querySelector('h2');
