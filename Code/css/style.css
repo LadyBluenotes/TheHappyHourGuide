@@ -153,8 +153,8 @@ button:hover {
 
 .drinkContent {
   width: 50%;
-  height: 50%;
-  margin: 10% auto;
+  height: auto;
+  margin: 5% auto;
 
   background: rgba(0, 0, 0, 0.9);
   border-radius: 1px;
@@ -224,3 +224,12 @@ input {
     opacity: 1;
   }
 }
+
+/* Media Queries */
+
+/* Mobile */
+
+
+
+/* Tablet */
+
