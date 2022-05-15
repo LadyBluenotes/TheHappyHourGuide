@@ -3,7 +3,7 @@
 document.getElementById('searchButton').addEventListener('click', getDrinkName);
 document.getElementById('randomDrink').addEventListener('click', getRandomDrink);
 document.getElementById('closeButton').addEventListener('click', closeButton);
-
+window.addEventListener('click', outsideClick);
 
 // Get recipe for a drink from API
 
@@ -86,8 +86,14 @@ function getRandomDrink() {
     document.querySelector('#modalDisplay').style.display = 'block';
 }
 
-// Modal window to display drink details
+// To close the window 
 
 function closeButton() {
     document.querySelector('#modalDisplay').style.display = 'none';
+}
+
+function outsideClick(e) {
+    if (e.target == document.querySelector('#modalDisplay')) {
+        document.querySelector('#modalDisplay').style.display = 'none';
+    }
 }

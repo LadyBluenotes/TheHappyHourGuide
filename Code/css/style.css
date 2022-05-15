@@ -163,6 +163,9 @@ button:hover {
   -webkit-backdrop-filter: blur(13.2px);
   padding: .5em;
   border-radius: 1rem;
+
+  animation-name: fadeIn;
+  animation-duration: 1s;
 }
 
 span {
@@ -208,4 +211,16 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
