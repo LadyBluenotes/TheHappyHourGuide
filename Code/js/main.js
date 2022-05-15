@@ -14,61 +14,72 @@ function getDrinkName() {
         .then(response => response.json())
         .then(data => {
             console.log(data.drinks);
-        })
-        .then((result) => function displayDrinks(result){
-
-            // If there are no drinks related to user input, display message
-            if (result.drinks == null){
+       
+            if (data.drinks == null){
                 alert("No drinks found. Please try again.");
                 return;
-            }
-        
-            // If there are drinks related to user input, display them
-            result.forEach((element) => {
-                let {thumbnail, glass, measurements, instructions, ingredients, alocholic, category } = showDrink();
-        
-                // Thumbnail from API
-                let drinkThumbnail = document.querySelector('img');
-                drinkThumbnail.src = element.strDrinkThumb;
-        
-                // Drink name from API
-                let drinkName = document.querySelector('h2');
-                drinkName.innerHTML = element.strDrink;
-        
-                // Instructions from API into a paragraph
-                let drinkInstructions = document.querySelector('p');
-                drinkInstructions.innerHTML = element.strInstructions;
-            });
+            } else {
+
+                // Show image
+                let chosenDrink = document.querySelector('#drinkThumbnail');
+                chosenDrink.src = data.drinks[0].strDrinkThumb;
+
+                // Show drink name
+                let chosenDrinkName = document.querySelector('.drinkName');
+                chosenDrinkName.innerHTML = data.drinks[0].strDrink;
+
+                // Show drink instructions
+                let chosenDrinkInstructions = document.querySelector('.drinkInstructions');
+                chosenDrinkInstructions.innerHTML = data.drinks[0].strInstructions;
+
+                // Show drink ingredients
+                let chosenDrinkIngredients = document.querySelector('.drinkIngredients');
+
+                for (let i = 1; i < 15; i++) {
+                    if (data.drinks[0][`strIngredient${i}`] != null && data.drinks[0][`strMeasure${i}`] != null) {
+                        chosenDrinkIngredients.innerHTML += `<li> ${data.drinks[0][`strMeasure${i}`]} ${data.drinks[0][`strIngredient${i}`]} </li>`;
+                    }
+                }
+            };
         })
         .catch(error => alert(error));
-}
+    }
+       
 
 // Get a random drink from API
+
+let randomDrinkPicked = '';
 
 function getRandomDrink() {
     fetch (`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
     .then(response => response.json())
     .then(data => {
         console.log(data.drinks);
+
+        // Show image
+        let randomDrink = document.querySelector('#drinkThumbnail');
+        randomDrink.src = data.drinks[0].strDrinkThumb;
+
+        // Show drink name
+        let randomDrinkName = document.querySelector('.drinkName');
+        randomDrinkName.innerHTML = data.drinks[0].strDrink;
+
+        // Show drink instructions
+        let randomDrinkInstructions = document.querySelector('.drinkInstructions');
+        randomDrinkInstructions.innerHTML = data.drinks[0].strInstructions;
+
+        // Show drink ingredients
+        let randomDrinkIngredients = document.querySelector('.drinkIngredients');
+
+        for (let i = 1; i < 15; i++) {
+            if (data.drinks[0][`strIngredient${i}`] != null && data.drinks[0][`strMeasure${i}`] != null) {
+                randomDrinkIngredients.innerHTML += `<li> ${data.drinks[0][`strMeasure${i}`]} ${data.drinks[0][`strIngredient${i}`]} </li>`;
+            }
+        }
     })
-    .then((result) => function returnRandom(result){
-    
-        result.forEach((element) => {
-            let {thumbnail, glass, measurements, instructions, ingredients, alocholic, category } = showDrink();
-    
-            // Thumbnail from API
-            let drinkThumbnail = document.querySelector('img');
-            drinkThumbnail.src = element.strDrinkThumb;
-    
-            // Drink name from API
-            let drinkName = document.querySelector('h2');
-            drinkName.innerHTML = element.strDrink;
-    
-            // Instructions from API into a paragraph
-            let drinkInstructions = document.querySelector('p');
-            drinkInstructions.innerHTML = element.strInstructions;
-        });
-    })
-    .catch(error => alert(error)); 
+     
 }
+
+
+// Modal window to display drink details
 
