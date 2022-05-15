@@ -2,6 +2,7 @@
 
 document.getElementById('searchButton').addEventListener('click', getDrinkName);
 document.getElementById('randomDrink').addEventListener('click', getRandomDrink);
+document.getElementById('closeButton').addEventListener('click', closeButton);
 
 
 // Get recipe for a drink from API
@@ -43,6 +44,9 @@ function getDrinkName() {
             };
         })
         .catch(error => alert(error));
+
+        // Show window with drink info
+        document.querySelector('#modalDisplay').style.display = 'block';
     }
        
 
@@ -77,9 +81,13 @@ function getRandomDrink() {
             }
         }
     })
-     
+    
+    // Show window with drink info
+    document.querySelector('#modalDisplay').style.display = 'block';
 }
-
 
 // Modal window to display drink details
 
+function closeButton() {
+    document.querySelector('#modalDisplay').style.display = 'none';
+}
