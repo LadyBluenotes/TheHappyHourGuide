@@ -124,6 +124,30 @@ button:hover {
 
 /* Result Modal Styling */
 
+#modalDisplay {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 1px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.2px);
+  -webkit-backdrop-filter: blur(13.2px);
+  padding: .5em;
+  border-radius: 1rem;
+}
+
+#drinkThumbnail {
+  width: 50%;
+  margin-left: 25%;
+}
+
 /* Background */
 
 body {
@@ -156,9 +180,4 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-div {
-  width: auto;
-  height: auto;
 }
