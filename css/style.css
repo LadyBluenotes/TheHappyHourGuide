@@ -15,7 +15,7 @@ header {
   text-align: center;
 
   overflow: wrap;
-  height: 20vh;
+  height: auto;
 
   /* Glassmorphism effect */
   background: rgba(255, 255, 255, 0.2);
@@ -31,8 +31,9 @@ header {
 }
 
 header > img {
-  height: 80%;
-  margin: 1rem 0 0 0;
+  width: 12%;
+  height: 12%;
+  margin: auto 0 ;
 }
 
 h1 {
