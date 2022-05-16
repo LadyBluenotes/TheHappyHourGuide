@@ -229,7 +229,57 @@ input {
 
 /* Mobile */
 
+@media  screen and (max-width: 992px) {
+  header > img {
+    display: none;
+  }
+  
+  h1 {
+    font-size: 7rem;
+  }
 
+  header {
+    height: auto;
+  }
+
+  .getInput {
+    width: 100%;
+    height: 50%;
+    padding-bottom: 5%;
+  }
+
+  h2{
+    font-size: 5rem;
+  }
+
+  .informationBox {
+    width: 80%;
+  }
+
+  .searchText {
+    height: 5rem;
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+  .drinkContent {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  span {
+    font-size: 5rem;
+  }
+
+  h4, ul, p {
+    font-size: 3rem;
+  }
+}
 
 /* Tablet */
 
