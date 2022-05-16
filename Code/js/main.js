@@ -31,7 +31,7 @@ function getDrinkName() {
 
                 // Show drink instructions
                 let chosenDrinkInstructions = document.querySelector('.drinkInstructions');
-                chosenDrinkInstructions.innerHTML = data.drinks[0].strInstructions;
+                chosenDrinkInstructions.innerHTML = data.drinks[0].strInstructions.split(' ').join('');
 
                 // Show drink ingredients
                 let chosenDrinkIngredients = document.querySelector('.drinkIngredients');
@@ -62,7 +62,7 @@ function getRandomDrink() {
 
         // Show image
         let randomDrink = document.querySelector('#drinkThumbnail');
-        randomDrink.src = data.drinks[0].strDrinkThumb;
+        randomDrink.src = data.drinks[0].strDrinkThumb.split(' ').join('');
 
         // Show drink name
         let randomDrinkName = document.querySelector('.drinkName');
