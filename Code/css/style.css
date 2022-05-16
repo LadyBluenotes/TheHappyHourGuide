@@ -36,10 +36,11 @@ header > img {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-family: 'Volkhov', serif;
   font-weight: 900;
   color: #fff;
+  padding: 3%;
 
   margin: 1.2rem 0 0 0;
 
