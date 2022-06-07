@@ -277,11 +277,23 @@ input {
   }
 
   span {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   h4, ul, p {
     font-size: 2rem;
+  }
+
+  ul, p{
+    font-size: 1.5rem;
+  }
+
+  .drinkContent h2, .drinkContent h4 {
+    font-size: 2rem;
+  }
+
+  img{
+    width: 40%;
   }
   
 }
