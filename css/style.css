@@ -237,7 +237,7 @@ input {
   }
   
   h1 {
-    font-size: 7rem;
+    font-size: 3rem;
     padding: 5%;
   }
 
@@ -252,7 +252,7 @@ input {
   }
 
   h2{
-    font-size: 5rem;
+    font-size: 2rem;
   }
 
   .informationBox {
@@ -260,13 +260,13 @@ input {
   }
 
   .searchText {
-    height: 5rem;
-    font-size: 2.5rem;
+    height: 2rem;
+    font-size: 1rem;
   }
 
   button {
-    font-size: 2.5rem;
-    padding: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem;
   }
 
   .drinkContent {
@@ -277,11 +277,12 @@ input {
   }
 
   span {
-    font-size: 5rem;
+    font-size: 2rem;
   }
 
   h4, ul, p {
-    font-size: 3rem;
+    font-size: 2rem;
   }
+  
 }
 
