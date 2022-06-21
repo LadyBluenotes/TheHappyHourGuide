@@ -1,6 +1,6 @@
 # TheHappyHourGuide
  
- A website to allow users to find random drinks or find their favourites.
+ A website to allow users to their favourite beverages or suprise them with a random one.
 
 ![happyHourFirst](https://user-images.githubusercontent.com/98355961/174711069-dfefb600-42bc-48b0-a56f-69e24f6be72f.png)
 
