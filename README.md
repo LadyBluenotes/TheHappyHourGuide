@@ -5,7 +5,7 @@
 ![happyHourFirst](https://user-images.githubusercontent.com/98355961/174711069-dfefb600-42bc-48b0-a56f-69e24f6be72f.png)
 
 
-See the live site [here](https://thehappyhourguide.netlify.app/)
+See the live site [here](http://happyhour.sarahgerrard.me/)
 
 
 ## Table of Contents
